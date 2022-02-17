@@ -1,0 +1,19 @@
+<%- include('./partials/header'); -%>
+
+    <h1>
+        Home</h1>
+    <p>
+        <%= kindOflist %>
+    </p>
+
+    <% textposts.forEach(function(textposts){ %>
+        <h1>
+            <%= textposts.title %>
+        </h1>
+        <p>
+            <%= textposts.content.substring(0,100) + " ..." %>
+                <a href="/textposts/<%= textposts.title %>">Read More</a>
+        </p>
+        <% }); %>
+
+            <%- include('./partials/footer'); -%>
